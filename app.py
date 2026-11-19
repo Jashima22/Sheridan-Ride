@@ -70,6 +70,8 @@ def get_users():
 
     cursor.execute("SELECT * FROM users")
     users = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
     return jsonify(users)
- 
-      

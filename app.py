@@ -1,18 +1,18 @@
 
 import os
 import mysql.connector
+
 from dotenv import load_dotenv
-from flask import Flask
+from flask import Flask, request, jsonify
 
 load_dotenv()
 
 app = Flask(__name__)
 
 
-# Connect Python to MySQL
+# Database connection
 def get_db_connection():
-
-    conn = mysql.connector.connect(
+    return mysql.connector.connect(
         host=os.getenv("MYSQL_HOST"),
         user=os.getenv("MYSQL_USER"),
         password=os.getenv("MYSQL_PASSWORD"),
@@ -20,29 +20,60 @@ def get_db_connection():
         port=int(os.getenv("MYSQL_PORT", "8889"))
     )
 
-    return conn
 
-
-# Test database connection
+# HOME
 @app.route("/")
 def home():
+    return "Ride App Home"
 
+
+# PASSENGER ROUTES
+
+@app.route("/passenger/available-rides")
+def p_available_rides():
+    return "Passenger - Available Rides"
+
+
+@app.route("/passenger/ride/<int:ride_id>")
+def p_ride_details(ride_id):
+    return f"Passenger - Ride Details: {ride_id}"
+
+
+@app.route("/passenger/book-ride/<int:ride_id>", methods=["POST"])
+def p_book_ride(ride_id):
+    return f"Booking Ride: {ride_id}"
+
+
+@app.route("/passenger/confirmed-rides")
+def p_confirmed_rides():
+    return "Passenger - Confirmed Rides"
+
+
+# DRIVER ROUTES
+
+@app.route("/driver/post-ride", methods=["GET", "POST"])
+def d_post_rides():
+    if request.method == "POST":
+        return "Ride submitted"
+
+    return "Driver - Post a Ride"
+
+
+@app.route("/driver/ride/<int:ride_id>")
+def d_ride_details(ride_id):
+    return f"Driver - Ride Details: {ride_id}"
+
+@app.route("/users")
+def get_users():
+    conn = get_db_connection()
+    cursor = conn.cursor(dictionary=True)
     try:
-        conn = get_db_connection()
-
-        cursor = conn.cursor()
-        cursor.execute("SELECT DATABASE()")
-
-        database = cursor.fetchone()
-
+        cursor.execute("SELECT * FROM users")
+        users = cursor.fetchall()
+        return jsonify(users)
+    finally:
         cursor.close()
         conn.close()
-
-        return f"Successfully connected to MySQL! Database: {database[0]}"
-
-    except mysql.connector.Error as error:
-        return f"MySQL connection failed: {error}", 500
-
 
 if __name__ == "__main__":
     app.run(debug=True)

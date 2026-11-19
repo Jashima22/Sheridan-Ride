@@ -67,13 +67,9 @@ def d_ride_details(ride_id):
 def get_users():
     conn = get_db_connection()
     cursor = conn.cursor(dictionary=True)
-    try:
-        cursor.execute("SELECT * FROM users")
-        users = cursor.fetchall()
-        return jsonify(users)
-    finally:
-        cursor.close()
-        conn.close()
 
-if __name__ == "__main__":
-    app.run(debug=True)
+    cursor.execute("SELECT * FROM users")
+    users = cursor.fetchall()
+    return jsonify(users)
+ 
+      

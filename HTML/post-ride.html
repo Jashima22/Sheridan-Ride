@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a ride</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+    <div class="container page-with-actions">
+
+        <main>
+
+            <h1 class="page-title post-title">Post a ride</h1>
+
+            <!-- ===== Route card ===== -->
+            <div class="card route-input">
+                <div class="stop">
+                    <img class="stop-marker" src="images/icon-marker.svg" alt="">
+                    <div>
+                        <p class="stop-name">Sheridan College</p>
+                        <p class="small-text">7899 McLaughlin Rd, Brampton</p>
+                    </div>
+                </div>
+
+                <div class="stop">
+                    <span class="marker-square stop-square"></span>
+                    <div>
+                        <p class="stop-name">Downtown Toronto</p>
+                        <p class="small-text">Union Station</p>
+                    </div>
+                </div>
+
+                <!-- Divider line + swap button -->
+                <div class="route-divider">
+                    <span class="route-line"></span>
+                    <button class="swap-btn" type="button">
+                        <img src="images/icon-refresh.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== Date & Time ===== -->
+            <div class="field-row">
+                <button class="field" type="button">
+                    <img src="images/icon-calendar.svg" alt="">
+                    Oct 24, 2026
+                </button>
+                <button class="field" type="button">
+                    <img src="images/icon-clock.svg" alt="">
+                    08:00 AM
+                </button>
+            </div>
+
+            <!-- ===== Seats ===== -->
+            <div class="row post-seats">
+                <p class="label">Seats</p>
+                <div class="stepper">
+                    <button class="circle-btn" type="button">−</button>
+                    <span class="stepper-number">1</span>
+                    <button class="circle-btn" type="button">+</button>
+                </div>
+            </div>
+
+            <hr class="post-divider">
+
+            <!-- ===== Price ===== -->
+            <div class="row">
+                <div>
+                    <p class="label">Price per seat</p>
+                    <p class="small-text">Set by distance · 38 km</p>
+                </div>
+                <p class="post-price">$12</p>
+            </div>
+
+            <p class="tag tag-purple post-tip">Tip: similar rides on this route cost $10–14 per seat.</p>
+
+            <div class="bottom-actions">
+                <a class="btn btn-primary btn-large" href="post-ride-details.html">Confirm</a>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- ===== Bottom tab bar ===== -->
+    <nav class="tab-bar">
+        <a class="tab" href="home.html">
+            <span class="tab-icon"><img src="images/icon-home.svg" alt=""></span>
+            Home
+        </a>
+        <a class="tab" href="search-results.html">
+            <span class="tab-icon"><img src="images/icon-search.svg" alt=""></span>
+            Find
+        </a>
+        <a class="tab active" href="post-ride.html">
+            <span class="tab-icon"><img src="images/icon-add-active.svg" alt=""></span>
+            Post
+        </a>
+        <a class="tab" href="#">
+            <span class="tab-icon"><img src="images/icon-activity.svg" alt=""></span>
+            Activity
+        </a>
+    </nav>
+
+</body>
+</html>

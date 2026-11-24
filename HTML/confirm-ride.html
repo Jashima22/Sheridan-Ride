@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm ride</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+    <div class="confirm-page">
+
+        <!-- ===== Map + round buttons ===== -->
+        <div class="confirm-map">
+            <img src="images/map.png" alt="">
+
+            <a class="map-btn confirm-back-btn" href="search-results.html">
+                <img src="images/icon-back.svg" alt="">
+            </a>
+            <button class="map-btn confirm-bell-btn" type="button">
+                <img src="images/icon-bell.svg" alt="">
+            </button>
+        </div>
+
+        <main>
+
+            <!-- ===== Bottom panel ===== -->
+            <div class="confirm-panel">
+                <div class="grabber"></div>
+
+                <!-- Time + price -->
+                <div class="row confirm-headline">
+                    <p>8:00 <img src="images/icon-arrow-right.svg" alt=""> 8:35 AM</p>
+                    <p>$12</p>
+                </div>
+
+                <p class="confirm-meta">
+                    Sat, Oct 24 · Steven <img src="images/icon-verified.svg" alt=""> · White Honda Civic
+                </p>
+
+                <!-- Route -->
+                <div class="card confirm-route">
+                    <div class="stop">
+                        <img class="stop-marker" src="images/icon-marker.svg" alt="">
+                        <div>
+                            <p class="stop-name">Lakeside Apartment</p>
+                            <p class="small-text">144 Front St, Oakville · 5 min walk</p>
+                        </div>
+                    </div>
+
+                    <div class="stop">
+                        <span class="marker-square stop-square"></span>
+                        <div>
+                            <p class="stop-name">Sheridan College</p>
+                            <p class="small-text">Trafalgar Rd campus</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seats -->
+                <div class="row confirm-seats">
+                    <div>
+                        <p class="label">Seats</p>
+                        <p class="small-text">2 left on this ride</p>
+                    </div>
+                    <div class="stepper">
+                        <button class="circle-btn" type="button">−</button>
+                        <span class="stepper-number">1</span>
+                        <button class="circle-btn" type="button">+</button>
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="row confirm-payment">
+                    <p>
+                        Visa •••• 4417
+                        <a class="small-text confirm-change" href="#">Change</a>
+                    </p>
+                    <p class="tag tag-purple">Free cancellation up to 2h before</p>
+                </div>
+
+                <a class="btn btn-primary btn-large" href="booked-ride-result.html">Confirm · $12</a>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- ===== Bottom tab bar ===== -->
+    <nav class="tab-bar">
+        <a class="tab" href="home.html">
+            <span class="tab-icon"><img src="images/icon-home.svg" alt=""></span>
+            Home
+        </a>
+        <a class="tab active" href="search-results.html">
+            <span class="tab-icon"><img src="images/icon-search-active.svg" alt=""></span>
+            Find
+        </a>
+        <a class="tab" href="post-ride.html">
+            <span class="tab-icon"><img src="images/icon-add.svg" alt=""></span>
+            Post
+        </a>
+        <a class="tab" href="#">
+            <span class="tab-icon"><img src="images/icon-activity.svg" alt=""></span>
+            Activity
+        </a>
+    </nav>
+
+</body>
+</html>

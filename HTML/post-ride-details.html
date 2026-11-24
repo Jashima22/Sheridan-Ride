@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post ride details</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+    <div class="container page-with-actions">
+
+        <!-- ===== Top bar ===== -->
+        <div class="top-bar row">
+            <a href="post-ride.html">
+                <img src="images/icon-back.svg" alt="">
+            </a>
+            <button type="button">
+                <img src="images/icon-bell.svg" alt="">
+            </button>
+        </div>
+
+        <main>
+
+            <!-- ===== Status ===== -->
+            <div class="ride-status">
+                <p class="tag tag-yellow status-pill">
+                    <img src="images/icon-tick.svg" alt="">
+                    Accepting requests
+                </p>
+                <p class="status-time">8:00 AM</p>
+                <p class="status-date">
+                    <img src="images/icon-calendar.svg" alt="">
+                    Thursday, Nov 12 · in 6 days
+                </p>
+            </div>
+
+            <!-- ===== Trip ===== -->
+            <div class="card trip-card">
+                <div class="stop">
+                    <p class="stop-time">8:00</p>
+                    <img class="stop-marker" src="images/icon-marker.svg" alt="">
+                    <div class="row stop-body">
+                        <div>
+                            <p>Lakeside Apartment</p>
+                            <p class="tag tag-purple stop-tip">Riders meet you here</p>
+                        </div>
+                        <a class="btn btn-secondary" href="#">
+                            Route
+                            <img class="route-arrow" src="images/icon-arrow-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="stop">
+                    <p class="stop-time">8:35</p>
+                    <span class="marker-square stop-square"></span>
+                    <p>Sheridan College</p>
+                </div>
+
+                <!-- Grey line between the two stops -->
+                <span class="trip-line"></span>
+            </div>
+
+            <!-- ===== Seats ===== -->
+            <p class="post-seats-title">SEATS</p>
+            <div class="row">
+                <p class="label">3 seats · $12 each</p>
+                <p class="small-text">0 requests</p>
+            </div>
+
+            <!-- ===== Buttons ===== -->
+            <div class="bottom-actions">
+                <a class="btn btn-primary btn-large" href="post-ride-result.html">Post ride</a>
+                <p class="bottom-links">
+                    <a href="post-ride.html">Edit ride</a>
+                    <a class="link-cancel" href="#">Cancel ride</a>
+                </p>
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- ===== Bottom tab bar ===== -->
+    <nav class="tab-bar">
+        <a class="tab" href="home.html">
+            <span class="tab-icon"><img src="images/icon-home.svg" alt=""></span>
+            Home
+        </a>
+        <a class="tab" href="search-results.html">
+            <span class="tab-icon"><img src="images/icon-search.svg" alt=""></span>
+            Find
+        </a>
+        <a class="tab active" href="post-ride.html">
+            <span class="tab-icon"><img src="images/icon-add-active.svg" alt=""></span>
+            Post
+        </a>
+        <a class="tab" href="#">
+            <span class="tab-icon"><img src="images/icon-activity.svg" alt=""></span>
+            Activity
+        </a>
+    </nav>
+
+</body>
+</html>

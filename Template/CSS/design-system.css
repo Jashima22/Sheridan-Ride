@@ -142,11 +142,28 @@ button {
 }
 
 /* ===== Route card (Home, Post a ride) ===== */
-/* Use: class="card route-input" */
+/* White card with dark border (Home, Post a ride) */
 .route-input {
     position: relative;
     margin-bottom: 16px;
     padding: 14px 16px;
+    background-color: #ffffff;
+    border: 1px solid #3a2706;
+    border-radius: 16px;
+}
+
+.route-input .stop:first-child {
+    margin-bottom: 16px;
+}
+
+.route-input .stop-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.route-input .small-text {
+    margin-top: 4px;
+    font-size: 13px;
 }
 
 /* Marker + text side by side (also used on confirm and booked pages) */
@@ -176,13 +193,13 @@ button {
 /* Line + swap button in the middle of the card */
 .route-divider {
     position: absolute;
-    left: 40px;
-    right: 16px;
-    top: 50%;
+    left: 38px;
+    right: 14px;
+    top: calc(50% + 1px);
     transform: translateY(-50%);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 15px;
 }
 
 .route-line {

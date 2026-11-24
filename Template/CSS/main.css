@@ -49,6 +49,12 @@
     vertical-align: middle;
 }
 
+/* Text box also uses middle, so its center lines up with the icon's center */
+.home-chip-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* ===== Map ===== */
 .home-map img {
     display: block;

@@ -1,0 +1,18 @@
+/* =============================================
+   Sheridan Ride - Mobile styles
+   Screens narrower than 600px (min 390px)
+   ============================================= */
+
+@media (max-width: 599px) {
+
+    /* Less space at the top on phones */
+    .container {
+        padding-top: 24px;
+    }
+
+    /* Confirm ride: map fills the whole width */
+    .confirm-map > img {
+        object-fit: cover;
+    }
+
+}

@@ -3,7 +3,7 @@ import os
 import mysql.connector
 
 from dotenv import load_dotenv
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 load_dotenv()
 
@@ -24,7 +24,7 @@ def get_db_connection():
 # HOME
 @app.route("/")
 def home():
-    return "Ride App Home"
+    return render_template("index.html")
 
 
 # PASSENGER ROUTES
